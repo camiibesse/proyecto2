@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand{
+    color: aqua;
+    transition: 0.5s;
+}
+.navbar-brand:hover{
+    transform: translate(0px);
+
+}
+
+header{
+    background-color: cornflowerblue;
+}
+
+/*animacion titulo*/
+.animate {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+  }
+
+  .bounce {
+    animation-name: bounce;
+  }
+  
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    40% {
+      transform: translateY(-30px);
+    }
+  
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+ 
+  
+.portada{
+    text-align: justify;
+    line-height: 2em;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    background-color: #3586ff;
+    min-height: 80px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social-icons, footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+footer .social-icons li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    
+}
+
+footer .social-icons li a:hover{
+    color: aqua;
+    transform: translate(-10px);
+}
+
+footer .menu li a{
+    font-size: 1.2em;
+    color:#fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover{
+    opacity: 10;
+}
+
+ footer p{
+    color: rgb(233, 171, 38);
+    text-align:center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+footer .wave{
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: url(../images/wave1.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 2s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 1000;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02{
+    0%{
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+
+/*CONTACTO */
+
+.div__container{
+    display: flex;
+    background-color: #fff;
+    height: 750px;
+    width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 25px;
+}
+
+.form{
+    padding: 30px 80px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2{
+    font-size: 45px;
+    color: #2c8af5;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.form p {
+    font-size: 16px;
+    color: #969EAE;
+    margin-bottom: 25px;
+}
+
+label{
+    font-size: 15px;
+    color: #969EAE;
+    margin-bottom: 15px;
+}
+
+.box{
+    border: 0;
+    background-color: #F4F4FD;
+    padding: 15px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.submit{
+    background-color: #2c8af5;
+    border: 0;
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    width: 250px;
+    margin-top: 25px;
+    box-shadow: 0 0 20px rgba(201, 199, 253, 0.5);
+}
+
+.info{
+    padding: 50px;
+
+}
+
+.img-1{
+    width: 350px;
+    margin-bottom: 75px;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.icons{
+    display: flex;
+    margin-bottom: 31px;
+}
+
+.icons img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.icons p{
+    font-size: 14px;
+    color: #969EAE;
+}
+
+.social{
+    display: flex;
+}
+
+.social img{
+    width: 50px;
+    margin-right: 30px;
+}
+
+/*Responsive */
+
+@media (max-width:990px) {
+    .div__container{
+        width: 350px;
+        height: 800px;
+        margin-top: 50px;
+    }
+    .info{
+        display: none;
+    }
+
+    .form{
+        width: 100%;
+        padding: 30px;
+    }
+    
+}
+
+/*COLCHONETAS*/
+
+.products{
+    width: 100%;
+    align-self: center;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.product{
+    position: relative;
+    background-color: var(--sectionBack);
+    width: 350px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.product:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.image{
+    width:100%;
+    height: 60%;
+    display: grid;
+    place-content: center;
+}
+.image img{
+    width: 240px;
+}
+.namePrice{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.namePrice h3{
+    font-size: 1.2em;
+    text-transform: capitalize;
+    color: black;
+}
+.namePrice span{
+    font-size: 1.4em;
+    color: green;
+}
+.product p{
+    font-size: 1.1em;
+    line-height: 20px;
+    color: lightslategray;
+}
+.stars{
+    font-size: 1.2em;
+    color: goldenrod;
+}
+.bay{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.bay button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--textColor);
+    color: var(--sectionBack);
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+}
+.bay button:hover{
+    transform: scale(1.1);
+}
